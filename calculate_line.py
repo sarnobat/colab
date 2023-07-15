@@ -33,7 +33,7 @@ x  = x_func
 fx = lambda x:  1502560.535 -1927.793779 * x + 0.9177545759 * x**2 -0.00009422419816 * x**3
 y  = [fx(val) for val in x]
 
-# plt.plot(x, fx(x))	
-plt.plot(x, y)
+plt.plot(x, fx(x))	
+# plt.plot(x, y)
 
 plt.show()
