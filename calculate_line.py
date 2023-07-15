@@ -22,7 +22,7 @@ x_func = np.linspace(0, 1000, 5000, 20000)
 
 def found_fit(x):
 	return 1502560.535 -1927.793779 * x + 0.9177545759 * x**2 -0.00009422419816 * x**3 
-#     return 0.388 * x**2  # Found with symfit.
-# f2 = lambda x: str(x * 3) + '!'
+f2 = lambda x: str(x * 3) + '_'
+print(f2('h'))
 y_func = found_fit(x_func)
 
