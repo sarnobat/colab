@@ -15,17 +15,17 @@ column_y_name = 'median_house_value'
 print('\n=== Input ===')
 print(df[column_name].values)
 print(df[column_y_name].values)
-plt.scatter(df[column_name].values, df[column_y_name].values, c='r', label='data2')
-
+plt.scatter(
+	df[column_name].values,
+	df[column_y_name].values,
+	c='r',
+	label='data2')
 
 number_of_features = 3
 print(df.head(number_of_features)[column_name].values)
 
-
-
 df['total_rooms_squared'] = df.total_rooms * df.total_rooms
 df['total_rooms_cubed'] = df.total_rooms * df.total_rooms * df.total_rooms
-
 
 # https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html
 # a = np.random.random(5000000)
