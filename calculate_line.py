@@ -21,7 +21,7 @@ plt.scatter(
 	c='r',
 	label='data2')
 
-number_of_features = 3
+number_of_features = 3 + 1
 print(df.head(number_of_features)[column_name].values)
 
 df['total_rooms_squared'] = df.total_rooms * df.total_rooms
@@ -31,10 +31,10 @@ df['total_rooms_cubed'] = df.total_rooms * df.total_rooms * df.total_rooms
 # a = np.random.random(5000000)
 # b = np.random.random(5000000)
 a = np.array([
-	[1,1,1],
-	df.head(number_of_features)[column_name].values,
-	df.head(number_of_features)['total_rooms_squared'].values,
-	df.head(number_of_features)['total_rooms_cubed'].values])
+	[1,1,1,1], 													# power of 0
+	df.head(number_of_features)[column_name].values,			# power of 1
+	df.head(number_of_features)['total_rooms_squared'].values,	# power of 2
+	df.head(number_of_features)['total_rooms_cubed'].values])	# power of 3
 # b = np.array([[1,4,5,6]])
 
 x = a
@@ -68,7 +68,7 @@ print('\n=== Y ===')
 y = np.array(df.head(number_of_features)[column_y_name].values)
 print(y)
 
-print('\n=== inverse (X Transposed dot X) dot Y===')
+print('\n=== theta = inverse (X Transposed dot X) dot Y===')
 
 theta = xTransposeDotXInverted.dot(y)
 print(theta)
