@@ -42,9 +42,17 @@ x = np.array([
 # b = np.array([[1,4,5,6]])
 
 # x = a
+# np.set_printoptions(suppress=True)
+np.set_printoptions(formatter={'all':lambda x: str(x)[-4:] })
+# np.set_printoptions(formatter={'all':lambda x: "{0:0.2f}".format(x)})
+# print ["{0:0.2f}".format(i) for i in a]
+
 
 print('\n=== X ===')
-print(x)
+print(type(x))
+print(np.get_printoptions())
+
+print(np.array2string(x))
 # print('=== B ===')
 # print(b)
 # print('=== A x B ===')
@@ -52,6 +60,7 @@ print(x)
 
 
 xTranspose = np.matrix.transpose(x)
+
 
 print('\n=== X Transposed ===')
 print(xTranspose)
