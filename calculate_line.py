@@ -13,8 +13,9 @@ column_name = 'total_rooms'
 print(df[column_name].values)
 print(df['median_house_value'].values)
 plt.scatter(df[column_name].values, df['median_house_value'].values, c='r', label='data2')
+
 print('=== Sample ===')
-print(df.head(3)[column_name].to_numpy())
+print(df.head(3)[column_name].values)
 
 # https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html
 # a = np.random.random(5000000)
