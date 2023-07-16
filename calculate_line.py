@@ -38,7 +38,6 @@ x = np.array([
 # b = np.array([[1,4,5,6]])
 
 # x = a
-a=x
 
 print('\n=== X ===')
 print(x)
@@ -47,7 +46,7 @@ print(x)
 # print('=== A x B ===')
 # print(np.array(a).dot(np.array(b)))
 
-x = a
+
 xTranspose = np.matrix.transpose(x)
 
 print('\n=== X Transposed ===')
