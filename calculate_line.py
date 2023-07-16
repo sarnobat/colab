@@ -8,14 +8,14 @@ import pandas as pd
 ##
 df = pd.read_csv(sys.argv[1] if len(sys.argv) > 1 else 'housing.csv')
 # print(df.columns[1:2].values[:,None])
-print(df)
+# print(df)
 column_name = 'total_rooms'
 column_y_name = 'median_house_value'
 print(df[column_name].values)
 print(df[column_y_name].values)
 plt.scatter(df[column_name].values, df[column_y_name].values, c='r', label='data2')
 
-print('=== Sample ===')
+print('\n=== Sample ===')
 number_of_features = 3
 print(df.head(number_of_features)[column_name].values)
 
@@ -30,7 +30,7 @@ x = a
 
 
 
-print('=== A ===')
+print('\n=== A ===')
 print(a)
 # print('=== B ===')
 # print(b)
@@ -40,26 +40,31 @@ print(a)
 x = a
 xTranspose = np.matrix.transpose(x)
 
-print('=== X Transposed ===')
+print('\n=== X Transposed ===')
 print(xTranspose)
 
-print('=== X Transposed dot X ===')
+print('\n=== X Transposed dot X ===')
 xTransposeDotX = xTranspose.dot(x)
 print(xTransposeDotX)
 
-print('=== inverse (X Transposed dot X) ===')
+print('\n=== inverse (X Transposed dot X) ===')
 xTransposeDotXInverted = np.linalg.inv(xTransposeDotX)
 # print('-----------------')
 # print(xTransposeDotX)
 # print('-----------------')
 print(xTransposeDotXInverted)
 
-print('=== inverse (X Transposed dot X) dot Y===')
-y = np.array([7,8,9])
+print('\n=== Y ===')
+# y = np.array([7,8,9])
+y = np.array(df.head(number_of_features)[column_y_name].values)
+print(y)
+
+print('\n=== inverse (X Transposed dot X) dot Y===')
+
 theta = xTransposeDotXInverted.dot(y)
 print(theta)
 
-print('-----------------')
+print('\n-----------------')
 x = np.linspace(0, 1000, 5000, 20000)
 fx = lambda x:  1502560.535 -1927.793779 * x + 0.9177545759 * x**2 -0.00009422419816 * x**3
 
