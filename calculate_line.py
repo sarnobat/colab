@@ -13,6 +13,12 @@ print(df['total_rooms'].values)
 print(df['median_house_value'].values)
 plt.scatter(df['total_rooms'].values, df['median_house_value'].values, c='r', label='data2')
 
+
+a = np.random.random(5000000)
+b = np.random.random(5000000)
+print(np.array(a).dot(np.array(b)))
+
+
 x = np.linspace(0, 1000, 5000, 20000)
 fx = lambda x:  1502560.535 -1927.793779 * x + 0.9177545759 * x**2 -0.00009422419816 * x**3
 
