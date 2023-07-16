@@ -30,17 +30,18 @@ df['total_rooms_cubed'] = df.total_rooms * df.total_rooms * df.total_rooms
 # https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html
 # a = np.random.random(5000000)
 # b = np.random.random(5000000)
-a = np.array([
+x = np.array([
 	[1,1,1,1], 													# power of 0
 	df.head(number_of_features)[column_name].values,			# power of 1
 	df.head(number_of_features)['total_rooms_squared'].values,	# power of 2
 	df.head(number_of_features)['total_rooms_cubed'].values])	# power of 3
 # b = np.array([[1,4,5,6]])
 
-x = a
+# x = a
+a=x
 
-print('\n=== A ===')
-print(a)
+print('\n=== X ===')
+print(x)
 # print('=== B ===')
 # print(b)
 # print('=== A x B ===')
@@ -75,7 +76,8 @@ print(theta)
 
 print('\n-----------------')
 x = np.linspace(0, 1000, 5000, 20000)
-fx = lambda x:  1502560.535 -1927.793779 * x + 0.9177545759 * x**2 -0.00009422419816 * x**3
+# fx = lambda x:  1502560.535 -1927.793779 * x + 0.9177545759 * x**2 -0.00009422419816 * x**3
+fx = lambda x:  66 -0.049 * x + 83 * x**2 -141 * x**3
 
 # median income would be better - "total" is not a good metric
 
