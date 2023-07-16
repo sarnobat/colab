@@ -13,18 +13,10 @@ print(df['total_rooms'].values)
 print(df['median_house_value'].values)
 plt.scatter(df['total_rooms'].values, df['median_house_value'].values, c='r', label='data2')
 
-x_data = list(range(10))
-y_data = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
-
-x_func = np.linspace(0, 1000, 5000, 20000)
-
-print((lambda x: str(x * 3) \
-	+ '_')('i'))
-y_func = (lambda x: str(x * 3) \
-	+ '_')
-x  = x_func
+x = np.linspace(0, 1000, 5000, 20000)
 fx = lambda x:  1502560.535 -1927.793779 * x + 0.9177545759 * x**2 -0.00009422419816 * x**3
 
-plt.plot(x, fx(x))	
+# median income would be better - "total" is not a good metric
 
+plt.plot(x, fx(x))	
 plt.show()
