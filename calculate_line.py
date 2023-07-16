@@ -10,9 +10,10 @@ df = pd.read_csv(sys.argv[1] if len(sys.argv) > 1 else 'housing.csv')
 # print(df.columns[1:2].values[:,None])
 print(df)
 column_name = 'total_rooms'
+column_y_name = 'median_house_value'
 print(df[column_name].values)
-print(df['median_house_value'].values)
-plt.scatter(df[column_name].values, df['median_house_value'].values, c='r', label='data2')
+print(df[column_y_name].values)
+plt.scatter(df[column_name].values, df[column_y_name].values, c='r', label='data2')
 
 print('=== Sample ===')
 print(df.head(3)[column_name].values)
