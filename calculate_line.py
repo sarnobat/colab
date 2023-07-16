@@ -5,6 +5,10 @@ import matplotlib.cbook as cbook
 import sys
 import pandas as pd
 
+
+def printNum(f):
+	'{0:f}'.format(f)
+
 ##
 df = pd.read_csv(sys.argv[1] if len(sys.argv) > 1 else 'housing.csv')
 # print(df.columns[1:2].values[:,None])
