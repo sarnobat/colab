@@ -16,7 +16,8 @@ print(df[column_y_name].values)
 plt.scatter(df[column_name].values, df[column_y_name].values, c='r', label='data2')
 
 print('=== Sample ===')
-print(df.head(3)[column_name].values)
+number_of_features = 3
+print(df.head(number_of_features)[column_name].values)
 
 # https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html
 # a = np.random.random(5000000)
