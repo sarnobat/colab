@@ -31,10 +31,10 @@ df['total_rooms_cubed'] = df.total_rooms * df.total_rooms * df.total_rooms
 # a = np.random.random(5000000)
 # b = np.random.random(5000000)
 a = np.array([
+	[1,1,1],
 	df.head(number_of_features)[column_name].values,
-	[1,2,3],
-	[4,5,6],
-	[4,5,6]])
+	df.head(number_of_features)['total_rooms_squared'].values,
+	df.head(number_of_features)['total_rooms_cubed'].values])
 # b = np.array([[1,4,5,6]])
 
 x = a
