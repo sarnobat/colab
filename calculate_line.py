@@ -17,8 +17,8 @@ plt.scatter(df['total_rooms'].values, df['median_house_value'].values, c='r', la
 # https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html
 # a = np.random.random(5000000)
 # b = np.random.random(5000000)
-a = np.array([[1,2,3],[4,5,6],[4,5,6]])
-b = np.array([[4,5,6]])
+a = np.array([[1,2,3],[4,5,6],[4,5,6],[1,1,1]])
+b = np.array([[1,4,5,6]])
 
 x = a
 print('=== A ===')
