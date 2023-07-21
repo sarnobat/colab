@@ -1,8 +1,15 @@
+import sys
+import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 
-x = [4, 5, 10, 4, 3, 11, 14 , 6, 10, 12]
-y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
+df = pd.read_csv(sys.argv[1] if len(sys.argv) > 1 else 'train.csv')
+print(df['x_3'])
+
+x = df['x_3']
+y = df['x_4']
+# x = [4, 5, 10, 4, 3, 11, 14 , 6, 10, 12]
+# y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
 
 # plt.scatter(x, y)
 # plt.show()
@@ -23,7 +30,7 @@ for i in range(1,11):
 # plt.ylabel('Inertia')
 #plt.show()
 
-kmeans = KMeans(n_clusters=2)
+kmeans = KMeans(n_clusters=6)
 kmeans.fit(data)
 
 plt.scatter(x, y, c=kmeans.labels_)
