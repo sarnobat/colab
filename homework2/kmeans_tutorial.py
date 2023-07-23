@@ -30,6 +30,7 @@ for i in range(1,11):
 # plt.ylabel('Inertia')
 #plt.show()
 
+# This doesn't look very useful
 kmeans = KMeans(n_clusters=6)
 kmeans.fit(data)
 
