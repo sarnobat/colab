@@ -1,0 +1,5 @@
+Get training data from:
+/media/sarnobat/navajo/iPhone*sridhar
+
+Get production data from:
+/media/sarnobat/unmirrored/disks/cherlormur
